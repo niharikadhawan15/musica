@@ -1,0 +1,150 @@
+
+<style>
+	.img1{
+    background-image: url("mood/happy.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img2{
+	 background-image: url("mood/sad.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img3{
+	 background-image: url("mood/romantic.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img4{
+	 background-image: url("mood/rainy.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img5{
+	 background-image: url("http://media.istockphoto.com/photos/frequency-of-blue-picture-id172646826?k=6&m=172646826&s=612x612&w=0&h=c4Br8MJjg87dwZFwuuvOjXVzjYX8tsALLua4Amdhlo4=");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}.img6{
+	 background-image: url("mood/wedding.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img7{
+	 background-image: url("mood/retro.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img8{
+	 background-image: url("mood/religious.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+.img9{
+	 background-image: url("mood/party.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+	border:0px;
+}
+
+</style>
+
+  <link rel="stylesheet" type="text/css" href="mood/font-awesome.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="mood" ng-controller="moodController">
+	<nav class="navbar navbar-default navbar-fixed">
+			<div class="container-fluid col-sm-12">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									 <span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Musica</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								 <li><a href="#!/home">Home</a></li>
+								 <li><a href="#!/about">About</a></li>
+								 <li><a href="#!/">Logout</a></li>
+							</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+			</div>
+			 <!-- /.container-fluid -->
+	</nav>
+    <div class="wrapper" >
+	         <div class="row" style="width:100%;height:95%;margin-left:10px;">
+	         <div class="col-md-4 col-xs-4 col-sm-4" style="height:100%;margin-top:10px;"><a href="songs/happy.html">
+	         <div class="panel panel-default img1" style=" height:30%; width:100%; background-color:#333333;">
+              <div class="panel-body"><i class="fa fa-smile-o" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;"></i>
+			  <div style="margin-left:85%;color:white;">Happy</div>
+			  </div></a>
+             </div>
+             <div class="panel panel-default img2" style=" height:30%; width:100%; background-color:#333333"><a href="songs/sad.html">
+              <div class="panel-body">
+			  <i class="fa fa-frown-o" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;"></i>
+			  <div style="margin-left:85%;color:white;">Sad</div>
+			  </div></a>
+             </div>
+             <div class="panel panel-default img3" style=" height:30%; width:100%; background-color:#333333;"><a href="songs/romantic.html">
+              <div class="panel-body"><i class="fa fa-heart" aria-hidden="true"  style="color:white;font-size:100px;margin-top:50px;margin-left:80%;"></i>
+			  </div>
+			  <div style="margin-left:85%;color:white;margin-top:-14px;">Romantic</div>
+             </div></a>
+			 </div>
+             <div class="col-md-4 col-sm-4 col-xs-4 " style="height:100%;margin-top:10px;">
+			 <div class="panel panel-default img4" style="height:30%;width:100%;background-color:#333333;"><a href="songs/rainy.html">
+             <div class="panel-body"><i class="fa fa-umbrella" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;">
+			 </i>
+			  <div style="margin-left:85%;color:white;margin-top:-3px;">Rainy</div>
+			  </div></a>
+              </div>
+			 <div class="panel panel-default img5" style="height:30%;width:100%;background-color:#333333;"><a href="songs/mix.html">
+              <div class="panel-body">
+			  <i class="fa fa-random" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;border:0px;"></i>
+			  <div style="margin-left:85%;color:white;margin-top:-3px;">Mix</div>
+			  </div></a>
+             </div>
+			 <div class="panel panel-default img6" style="height:30%;width:100%;background-color:#333333;"><a href="songs/wedding.html">
+              <div class="panel-body"><i class="material-icons" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;border:0px;">sentiment_very_satisfied</i>
+			  <div style="margin-left:85%;color:white;margin-top:-3px;">Wedding</div>
+			  </div></a>
+             </div>
+			 </div>
+			  <div class ="col-md-4 col-sm-4 col-xs-4 " style="height:100%;margin-top:10px;">
+			  <div class="panel panel-default img7" style="height:30%;width:100%;background-color:#333333;"><a href="songs/retro.html">
+               <div class="panel-body"><i class="material-icons" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;border:0px;">radio</i>
+			  <div style="margin-left:85%;color:white;margin-top:-3px;">Retro</div>
+			   </div></a>
+              </div>
+			 <div class="panel panel-default img8" style="height:30%;width:100%;background-color:#333333;"><a href="songs/religious.html">
+              <div class="panel-body"><i class="material-icons" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;border:0px;">face</i>
+			  <div style="margin-left:85%;color:white;margin-top:-3px;">Religious</div>
+			  </div></a>
+             </div>
+             <div class="panel panel-default img9" style="height:30%;width:100%;background-color:#333333;"><a href="songs/party.html">
+              <div class="panel-body">
+			  <i class="material-icons" aria-hidden="true" style="color:white;font-size:100px;margin-top:50px;margin-left:80%;border:0px;">party_mode</i>
+			  <div style="margin-left:85%;color:white;margin-top:-10px;">Party</div>
+			  </div></a>
+             </div>
+			 </div>
+
+			 </div>
+	 </div>
+	 </div><!-- div of panels ended-->
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.back{
+  padding: 5px;
+  font-size: 20px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title> Song App</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+<!--     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
+</head>
+
+<body>
+
+
+       <!--  the list of different playlists is shown and is displayed in the left side of the page -->
+         <span  id="playList" class = "pull-left ">
+            <h3>Playlist</h3>
+            <ul id="songList">
+                <li id="songList1">Hindi</li> <!-- playlist name -->
+                <li id="songList2">Punjabi</li>   <!-- playlist name -->
+                <li id="songList3">English</li>   <!-- playlist name -->
+
+                  <div class="modal fade">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" style="color: red">Choose from localSystem</h4>
+                <input type="file" id="my-file" accept=".mp3, .mpeg, .wav, .ogg"></input>
+                <output id="op"></output>
+              </div><!-- modal-header -->
+
+            </div><!-- modal-content -->
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div style="margin-top:300px; margin-right:100px; ">
+      <a href="/#!/" ><button class="pull-right back" style="margin-left: 850px"><b>Back</b></button></a></div>
+            </ul>
+            </span>
+            <span id= border></span>
+
+        <div class="main ">
+            <header>
+                <div class="right floated user-name"> </div>
+            </header>
+            <section class="content">
+               <audio src="songs/song1.mp3"></audio>
+                  <audio src="songs/song2.mp3"></audio>
+                    <audio src="songs/song3.mp3"></audio>
+                      <audio src="songs/song4.mp3"></audio>
+
+                      <!--  this table is used to display the details of the songs that are present in the playlist -->
+                      <table id="songs">
+                          <thead class="list-headers edit">
+                                  <tr><!-- <td>Song No.</td> -->
+                                  <td> Title </td>
+                                  <td> Artist </td>
+                                  <td> Album </td>
+                                  <td><span class="fa fa-calendar-plus-o"></span></td>
+                              </tr></thead>
+                              <!-- <div class="song-list"> -->
+                                  <tbody><tr class="song edit" id="song1">
+                                      <!-- <td class="song-number"></td> -->
+                                      <td class="song-name"></td>
+                                      <td class="song-artist"></td>
+                                      <td class="song-album"></td>
+                                      <td class="song-length"></td>
+                                  </tr>
+                                  <tr class="song edit" id="song2">
+                                  	<!--   <td class="song-number"></td> -->
+                                      <td class="song-name"></td>
+                                      <td class="song-artist"></td>
+                                      <td class="song-album"></td>
+                                      <td class="song-length"></td>
+                                  </tr>
+                                  <tr class="song edit" id="song3">
+                                    <!--   <td class="song-number"></td> -->
+                                      <td class="song-name"></td>
+                                      <td class="song-artist"></td>
+                                      <td class="song-album"></td>
+                                      <td class="song-length"></td>
+                                  </tr>
+                                  <tr class="song edit" id="song4">
+                                   <!--    <td class="song-number"></td> -->
+                                      <td class="song-name"></td>
+                                      <td class="song-artist"></td>
+                                      <td class="song-album"></td>
+                                      <td class="song-length"></td>
+                                  </tr>
+
+
+                              <!-- </div> -->
+                          </tbody></table>
+
+
+<!-- this section contains the description of the current playing song with its slideshow of related images  w3-animate-fading -->
+<div class="slider current-song-slide "><img id="slider" alt="" src="" /> </div>
+		<div class="current-song-wrapper pull-left">
+        <img class="current-song-image">      <!--current song image  -->
+        <div>
+        <p class="current-song-name"></p>       <!--name of the current playing song  -->
+        <p class="current-song-album"></p>         <!--album name of the current playing song  -->
+        <p id="totalSongs" style="color: yellow"></p>    <!--total songs in the playlist  -->
+        </div>
+        </div>
+            </section>
+
+
+<!-- the footer contains the section for the various player buttons -->
+            <footer>
+                <div class="controls">
+                    <div class="player-buttons">
+                    <span class="volume fa fa-volume-up"></span>
+                      <div id="vol_slider">                       <!--  volume slider that will help to  adjust the volume of the songs using volume slider -->
+                          <div id="vol_filled"></div>
+                      </div>
+      <i class="fa fa-random clickable disabled" aria-hidden="true"></i>       <!--  shuffle button which will shuffle the song-->
+      <i class="fa fa-step-backward clickable" aria-hidden="true"></i>         <!--  backward button which will play the last song-->
+      <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>        <!--  play/pause button -->
+      <i class="fa fa-step-forward clickable" aria-hidden="true"></i>          <!--  forward button  which will play the next song-->
+      <i class="fa fa-repeat disabled clickable" aria-hidden="true"></i>   		<!--  repeat button -->
+
+    </div>
+
+                    <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>                    <!--  this will show the progress bar of the current playing song -->
+                        <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<!--     necessary scripts are added -->
+    <script src="jquery.js">
+    </script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
+    </script>
+<script src ="romantic.js">
+    </script>
+        <script src="jsmediatags.min.js"></script>
+</body>
+
+</html>
